@@ -145,6 +145,9 @@
   border-radius: var(--size-border-radius);
   padding: 8px 12px;
 }
+.home_contact:hover{
+  background-color: var(--color-orange);
+}
 
 /* Section common */
 .section {
@@ -427,4 +430,57 @@
   transform: scale(1.1);
   color: var(--color-yellow);
   transition: all var(--animation-duration);
+}
+
+/*Scroll*/
+.arrow-up{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  border-radius: 50%;
+  /*opacity: 0;*/
+}
+
+.navbar__toggle-btn {
+  color: var(--color-white);
+  font-size: var(--font-medium);
+  right: 25px; /*보이지 않게 하기 때문에 간격은 상관없음*/
+  display: none;
+}
+
+/*For below 768px screen width*/
+@media screen and (max-width:768px){
+  /*Font size*/
+  :root{
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
+  .navbar__toggle-btn { /*화면이 줄어들었을떄 줄어들게 하는거?*/
+    display:block;
+    top: 16px;
+    font-size: var(--font-medium);
+  }
+
+  #navbar {
+    flex-direction : column;
+    align-items:flex-start;
+    background-color: var(--color-pink);
+  }
+
+  .navbar__menu {
+    flex-direction : column;
+    text-align: center;
+    width: 100%;
+    
+  }
 }
