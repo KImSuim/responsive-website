@@ -28,6 +28,8 @@
   /* Annimation */
   --animation-duration: 300ms;
 }
+
+/* Universal tags */
 * {
   box-sizing: border-box;
 }
@@ -51,6 +53,7 @@ button {
   border: none;
   outline: none;
 }
+
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -87,6 +90,7 @@ p {
   justify-content: space-between;
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
@@ -96,8 +100,11 @@ p {
 
 .navbar__logo {
   font-size: var(--font-medium);
-  color: var(--color-white);
-  font-weight: var(--weight-bold);
+  /* color: var(--color-white);
+  font-weight: var(--weight-bold); */
+  font-weight: var(--weight-semi-bold);
+  color: white;
+
 }
 .navbar__menu {
   display: flex;
@@ -108,17 +115,25 @@ p {
   color: var(--color-white);
   cursor: pointer;
 }
-.navbar__menu__item:active {
-  border: 1px solid var(--color-white);
-  border-radius: var(--size-border-radius);
-}
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
   border-radius: var(--size-border-radius);
+  /* border: 1px solid var(--color-white); */
+  border: 1px solid white;
+  border-radius: var(--size-border-radius);
 }
+.navbar__toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
-  background: url(../imgs/home-background.png) center/cover no-repeat;
+  background: url(../imgs/프로필.png) center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
