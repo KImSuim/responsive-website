@@ -2,7 +2,7 @@
 
 //넷바 색상 변경
 // let :변하는 상수 | const :변하지 않는 상수
-const navbar =document.querySelector('#navbar')
+const navbar = document.querySelector('#navbar')
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
     if(window. scrollY > navbarHeight){

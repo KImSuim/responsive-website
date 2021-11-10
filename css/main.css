@@ -422,6 +422,10 @@ p {
   display: none;
 }
 
+.arrow-up {
+
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   /* Font size */
@@ -517,5 +521,6 @@ p {
     line-height: 50px;
     right: 16px;
     bottom: 16px;
+    transform: perspective();
   }
 }
