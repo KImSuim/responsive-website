@@ -114,6 +114,7 @@ p {
   margin: 0 4px;
   color: var(--color-white);
   cursor: pointer;
+  border: 1px solid transparent;
 }
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
@@ -457,10 +458,14 @@ p {
     display: block;
   }
 
-  .section {
+.navbar__menu.open {
+  display: block;
+}
+
+  /* .section {
     padding: 16px;
     padding-top: 40px;
-  }
+  } */
 
   .about__majors {
     flex-direction: column;
