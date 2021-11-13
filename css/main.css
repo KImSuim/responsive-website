@@ -422,10 +422,6 @@ p {
   display: none;
 }
 
-.arrow-up {
-
-}
-
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   /* Font size */
