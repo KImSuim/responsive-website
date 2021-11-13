@@ -3,13 +3,13 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #fe918d;
-  --color-dark-pink: #ff6863;
+  --color-pink: #FFBD65;
+  --color-dark-pink: #FFB224;
   --color-black: #4d4d4d;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-blue: #73aace;
+  --color-blue: #9A9297;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -134,7 +134,7 @@ p {
 
 /* Home */
 #home {
-  background: url(../imgs/프로필.png) center/cover no-repeat;
+  background: url(../imgs/프로필2.png) center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
