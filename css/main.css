@@ -132,7 +132,7 @@ p {
   display: none;
 }
 
-/* Home */
+/* Home */z
 #home {
   background: url(../imgs/프로필.png) center/cover no-repeat;
   padding: 40px;
@@ -409,10 +409,17 @@ p {
   width: 70px;
   height: 70px;
   font-size: 50px;
+  opacity: 0;
+  pointer-events: none;
   color: var(--color-white);
   background-color: var(--color-pink);
   border-radius: 50%;
-  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .navbar__toggle-btn {

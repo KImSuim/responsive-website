@@ -36,13 +36,6 @@ const home = document.querySelector(".home__container")
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", ()=>{
     home.style.opacity = 1 - window.scrollY/homeHeight;
-
-    if (window.scrollY > homeHeight /2 ){
-        arrowUp.style.opacity =1;
-    }
-    if (window.scrollY < 1) {
-        arrowUp.style.opacity = 0;
-    }
 });
 
 //햄버거 메뉴 클릭할 때
@@ -51,18 +44,29 @@ navbarToggleBtn.addEventListener("click", ()=>{
     navbarMenu.classList.toggle("open");
 });
 
+//
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior : 'smooth'});
 }
 
+//
 document.addEventListener('scroll', function() {
     var currentScrollValue = document.documentElement.scrollTop;
     console.log('currentScrollValue is ' + currentScrollValue);
 });
 
-//arrow-up 버튼 이동하기
+// arrow up 버튼 스크롤 될 때 생성
 const arrowUp = document.querySelector(".arrow-up");
-arrowUp.addEventListener("click", ()=> {
-    document.querySelector("#home").scrollIntoView({behavior : 'smooth'});
+document.addEventListener("scroll", () => {
+    if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+    } else {
+    arrowUp.classList.remove("visible");
+    }
+});
+
+// arrow up 버튼 클릭했을 때 home으로 올라가기
+arrowUp.addEventListener("click", () => {
+    scrollIntoView("#home");
 });
