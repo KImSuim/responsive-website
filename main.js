@@ -44,13 +44,7 @@ navbarToggleBtn.addEventListener("click", ()=>{
     navbarMenu.classList.toggle("open");
 });
 
-//
-function scrollIntoView(selector) {
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior : 'smooth'});
-}
-
-//
+//??
 document.addEventListener('scroll', function() {
     var currentScrollValue = document.documentElement.scrollTop;
     console.log('currentScrollValue is ' + currentScrollValue);
@@ -70,3 +64,44 @@ document.addEventListener("scroll", () => {
 arrowUp.addEventListener("click", () => {
     scrollIntoView("#home");
 });
+
+// 프로젝트 js 부분
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+workBtnContainer.addEventListener("click", (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+    projects.forEach((project) => {
+        if (filter === "*" || filter === project.dataset.type) {
+            project.classList.remove("invisible");
+        } else {
+            project.classList.add("invisible");
+        }
+    });
+    const active = document.querySelector(".category__btn.selected");
+    if (active != null) {
+        active.classList.remove("selected");
+    }
+    e.target.classList.add("selected");
+    projectContainer.classList.add("anim-out");
+    setTimeout(() => {
+        projects.forEach((project) => {
+            console.log(project.dataset.type);
+            if (filter === "*" || filter === project.dataset.type) {
+                project.classList.remove("invisible");
+            } else {
+                project.classList.add("invisible");
+            }
+        });
+        projectContainer.classList.remove("anim-out");
+    }, 300);
+});
+
+//??
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior : 'smooth'});
+}
