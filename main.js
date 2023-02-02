@@ -10,12 +10,11 @@ document.addEventListener("scroll", () => {
     } else {
         navbar.classList.remove('navbar--dark');
     }
-
 });
 
 //넷바메뉴 선택시 해당 부분으로 이동하기
 const navbarMenu = document.querySelector('.navbar__menu');
-navbarMenu.addEventListener("click", (event)=>{
+navbarMenu.addEventListener("click", ()=>{
     const target = event.target;
     const link = target.dataset.link;
     if(link == null) {
